@@ -7,7 +7,7 @@ const Footer = () => {
     <div style={{height:'300px'}} className=' container mt-5 w-100'>
     <div className='d-flex justify-content-between'>
       <div style={{width:'400px'}} className='intro'>
-        <h5><i className="fa-solid fa-mug-saucer"></i> Foodz</h5>
+        <h5><i className="fa-solid fa-mug-saucer"></i> Foodza</h5>
         <p>Designed and built with all the love in the world by the June 2024 Batch with the help of our contributors.</p>
         <p>Code licensed Tony, docs CC By 4.0.</p>
         <p>Currently v5.3.2.</p>
