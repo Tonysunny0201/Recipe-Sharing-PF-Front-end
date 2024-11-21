@@ -7,7 +7,7 @@ const Header = ({insideDashboard}) => {
     <Navbar style={{zIndex:1}} className="border bg-info shadow position-fixed w-100">
       <Container>
           <Link to={'/'} style={{textDecoration:'none'}}>
-            <Navbar.Brand style={{color:'black'}} className=' fw-bolder'>
+            <Navbar.Brand style={{color:'black'}} className='fw-bolder'>
             <i className='fa-solid fa-mug-saucer'></i> Foodza
             </Navbar.Brand>
           </Link>

@@ -13,7 +13,7 @@ const Auth = ({insideRegister}) => {
               <img className='img-fluid' src={AuthImg} alt="" />
             </div>
             <div className='col-lg-6'>
-              <h1 className='mt-2'><i className='fa-solid fa-mug-saucer'></i> Foodza</h1>
+              <h1 className='mt-2 text-info'><i className='fa-solid fa-mug-saucer'></i> Foodza</h1>
               <h5> Sign {insideRegister ? "Up" : "In"} to your Account</h5>
               <Form>
                 { 
