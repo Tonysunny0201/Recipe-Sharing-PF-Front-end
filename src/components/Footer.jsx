@@ -9,7 +9,7 @@ const Footer = () => {
       <div style={{width:'400px'}} className='intro'>
         <h5 className='text-info'><i className="fa-solid fa-mug-saucer"></i> Foodza</h5>
         <p>Crafted with passion and dedication by our team, in collaboration with amazing contributors.</p>
-        <p>Code licensed under Tony!</p>
+        <p>Code licensed under Tony Sunny!</p>
         <p>Proudly running on v5.3.2</p>
       </div>
       <div className="d-flex flex-column">
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <p className='text-center mt-3'>Copyright &copy; June 2024 Batch, Foodz. Built with React.</p>
+    <p className='text-center mt-3'>Copyright <span className='text-info'>&copy;</span> June 2024 Batch, Foodz. Built with React.</p>
   </div>
   )
 }

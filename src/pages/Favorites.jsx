@@ -110,7 +110,7 @@ const Favorites = () => {
                   alt="EmptyWishlist"
                   style={{ maxHeight: '400px', objectFit: 'contain' }}
                 />
-                <h1 className="text-primary fw-bold display-6 mt-4">Your Favorites is Empty!!</h1>
+                <h1 className="text-primary fw-bold display-6 mt-4">Your <span className='text-info'>Favorites</span> is Empty!!</h1>
               </div>
             )}
           </Row>
