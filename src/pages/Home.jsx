@@ -45,7 +45,7 @@ const Home = () => {
             </div>
             <div className='col-lg-6'>
               <h1 style={{fontSize:'60px'}}>Sharing made simple</h1>
-              <p style={{textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum mollitia esse? In veniam officia repudiandae natus, dolorem labore deserunt praesentium alias libero ipsa aut dignissimos nulla perspiciatis dicta non!</p>
+              <p style={{textAlign:'justify'}}>Get ready to become the MVP of dinner parties with Foodza sharing features! Whether it’s that secret family recipe you’ve been guarding for years or a new recipe you just tried and loved, Foodza makes it easy to share your culinary creations with some easy steps.</p>
             </div>
           </div>
         </div>
