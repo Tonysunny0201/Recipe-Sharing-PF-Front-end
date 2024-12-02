@@ -1,7 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Image1 from '../assets/image1.png'
+
 const Home = () => {
+
+  // const [allHomeProjects,setAllHomeProjects] = useState([])
+  const navigate = useNavigate()
+
+  const handleRecipes = ()=>{
+    if(sessionStorage.getItem("token")){
+      navigate('/recipes')
+    }else{
+      alert("Please login to get full access to our website!!")
+    }
+  }
+
   return (
     <>
       {/* <Header/> */}
@@ -15,7 +28,12 @@ const Home = () => {
           </div>
         </div>
         <div className='text-center mt-4'>
-          <Link className='btn btn-warning' to={'/login'}>Started with Us</Link>
+          {
+            sessionStorage.getItem("token") ?
+            <Link className='btn btn-warning' to={'/dashboard'}>Dashboard</Link>
+            :
+            <Link className='btn btn-warning' to={'/login'}>Started with Us</Link>
+          }
         </div>
       </div>
 
@@ -35,8 +53,8 @@ const Home = () => {
         
       <div style={{height:'300px'}} className='text-center mt-5 p-5 bg-info'>
           <h1 style={{fontSize:'60px'}} className='mt-4'>Ready to get started?</h1>
-          <div className='mt-3'><Link className='btn btn-warning' to={'/recipes'}>ALL Recipes</Link></div>
-          <div className='mt-3'><Link className='btn btn-warning' to={'/login'}>Login</Link></div>
+          <div className='mt-3'><button onClick={handleRecipes} className='btn btn-warning'>ALL Recipes</button></div>
+          {/* <div className='mt-3'><Link className='btn btn-warning' to={'/login'}>Login</Link></div> */}
       </div>
       
     </>

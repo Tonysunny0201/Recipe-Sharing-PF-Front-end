@@ -8,9 +8,9 @@ const Footer = () => {
     <div className='d-flex justify-content-between'>
       <div style={{width:'400px'}} className='intro'>
         <h5 className='text-info'><i className="fa-solid fa-mug-saucer"></i> Foodza</h5>
-        <p>Designed and built with all the love in the world by the June 2024 Batch with the help of our contributors.</p>
-        <p>Code licensed Tony, docs CC By 4.0.</p>
-        <p>Currently v5.3.2.</p>
+        <p>Crafted with passion and dedication by our team, in collaboration with amazing contributors.</p>
+        <p>Code licensed under Tony!</p>
+        <p>Proudly running on v5.3.2</p>
       </div>
       <div className="d-flex flex-column">
         <h5>Links</h5>

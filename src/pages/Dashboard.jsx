@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../components/Header';
 import View from '../components/View';
 import Profile from '../components/Profile';
 import { Card } from 'react-bootstrap';
+import { editProfileResponseContext } from '../contexts/ContextApi';
 
 const Dashboard = () => {
+
+  const {editProfileResponse,setEditProfileResponse} = useContext(editProfileResponseContext)
+
+  const [username,setUsername] = useState("")
+
+  useEffect(()=>{
+    if(sessionStorage.getItem("user")){
+      setUsername(JSON.parse(sessionStorage.getItem("user")).username)
+    }else{
+      setUsername("")
+    }
+  },[editProfileResponse])
   return (
     <>
       <Header insideDashboard={true} />
@@ -13,7 +26,7 @@ const Dashboard = () => {
           <div className="col-lg-8">
             <div className="mb-4">
               <h1>
-                Welcome, <span className="text-warning">Tom</span>!
+                Welcome, <span className="text-warning">{username}</span>!
               </h1>
               <p className="text-muted">Here’s what’s happening with your recipes.</p>
             </div>

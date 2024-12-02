@@ -4,11 +4,17 @@ import './index.css'
 import './bootstrap.min.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
+import AuthContextAPI from './contexts/AuthContextAPI.jsx'
+import ContextApi from './contexts/ContextApi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AuthContextAPI>
+      <ContextApi>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ContextApi>
+    </AuthContextAPI>
   </StrictMode>,
 )
