@@ -8,7 +8,7 @@ import Recipes from './pages/Recipes'
 import Favorites from './pages/Favorites'
 import { useContext } from 'react'
 import { tokenAuthContext } from './contexts/AuthContextAPI'
-import AdminDash from './pages/adminDash'
+import AdminDash from './pages/AdminDash'
 
 function App() {
 
