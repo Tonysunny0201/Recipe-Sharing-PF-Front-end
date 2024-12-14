@@ -8,6 +8,7 @@ import Recipes from './pages/Recipes'
 import Favorites from './pages/Favorites'
 import { useContext } from 'react'
 import { tokenAuthContext } from './contexts/AuthContextAPI'
+import AdminDash from './pages/adminDash'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' element={<Auth/>}/>
         <Route path='/register' element={<Auth insideRegister={'true'}/>}/>
         <Route path='/favorites' element={isAuthoried ? <Favorites/>: <Navigate to={'/login'} /> }/>
+        <Route path='/admin' element={isAuthoried ? <AdminDash/> : <Navigate to={'/login'}/> }/>
       </Routes> 
       <Footer/>
     </>

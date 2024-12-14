@@ -49,10 +49,21 @@ export const addToFavoritesAPI = async (reqBody,reqHeader) => {
 
 // Get favorites API
 export const getFavoritesAPI = async (reqHeader) => {
-    return await commonAPI("GET", `${SERVER_URL}/user-bookmarks`, {},reqHeader);  // Adjust the endpoint according to your backend
+    return await commonAPI("GET", `${SERVER_URL}/user-bookmarks`, {},reqHeader);
   }
 
 // Remove recipe from favorites (Bookmark)
 export const removeFromFavoritesAPI = async (id, reqHeader) => {
     return await commonAPI("DELETE", `${SERVER_URL}/bookmark/${id}/remove`, {}, reqHeader)
+}
+
+// get all recipe for admin 
+export const adminRecipesAPI = async (reqHeader)=>{
+    return await commonAPI("GET",`${SERVER_URL}/admin-recipe`,{},reqHeader)
+}
+
+// recipe/:id/update
+// recipe/67496122a602da20687f05bf/update?status=Approved
+export const  updateRecipeStatusAPI= async (recipeId,status,reqHeader)=>{
+    return await commonAPI("GET",`${SERVER_URL}/recipe/${recipeId}/update?status=${status}`,{},reqHeader)
 }

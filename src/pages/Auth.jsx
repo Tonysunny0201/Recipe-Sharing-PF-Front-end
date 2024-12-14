@@ -48,13 +48,18 @@ const Auth = ({insideRegister}) => {
       try{
         const result = await loginAPI(inputData)
         if(result.status==200){
+          const { user, token } = result.data;
           sessionStorage.setItem("user",JSON.stringify(result.data.user))
           sessionStorage.setItem("token",result.data.token)
           setIsAuthoried(true) 
           setIsLogined(true)
           setTimeout(() => {
             setInputData({username:"",email:"",password:""})
-            navigate('/')
+            if (user.role === "admin") {
+              navigate("/admin");
+            } else {
+              navigate("/");
+            }
             setIsLogined(false)
           }, 2000);
         }else {
